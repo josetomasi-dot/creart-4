@@ -1,0 +1,298 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 24px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn--primary {
+  color: #0b0b0b;
+  background: linear-gradient(180deg, #f1bd18 0%, var(--color-accent) 100%);
+  box-shadow: 0 12px 24px rgba(232, 177, 0, 0.14);
+}
+
+.btn--primary:hover {
+  background: var(--color-accent-hover);
+}
+
+.btn--ghost {
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.btn--ghost:hover {
+  border-color: var(--color-border-strong);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text);
+  transition: color 0.25s ease;
+}
+
+.link-arrow span {
+  transition: transform 0.25s ease;
+}
+
+.link-arrow:hover {
+  color: var(--color-accent);
+}
+
+.link-arrow:hover span {
+  transform: translateX(6px);
+}
+
+.accordion {
+  border-top: 1px solid var(--color-border);
+}
+
+.accordion:last-child {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.accordion__header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 30px 0;
+  transition: color 0.25s ease;
+}
+
+.accordion__header:hover .accordion__title {
+  color: var(--color-accent);
+}
+
+.accordion__title {
+  font-family: var(--font-heading);
+  font-size: clamp(22px, 2.8vw, 34px);
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+  text-align: left;
+  transition: color 0.25s ease;
+}
+
+.accordion__icon {
+  position: relative;
+  width: 28px;
+  height: 28px;
+}
+
+.accordion__icon::before,
+.accordion__icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: var(--color-text-muted);
+  transition: transform 0.25s ease, opacity 0.25s ease, background 0.25s ease;
+}
+
+.accordion__icon::before {
+  width: 14px;
+  height: 1.5px;
+  transform: translate(-50%, -50%);
+}
+
+.accordion__icon::after {
+  width: 1.5px;
+  height: 14px;
+  transform: translate(-50%, -50%);
+}
+
+.accordion.active .accordion__icon::before,
+.accordion.active .accordion__icon::after {
+  background: var(--color-accent);
+}
+
+.accordion.active .accordion__icon::after {
+  opacity: 0;
+}
+
+.accordion__body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.accordion__content {
+  padding: 0 0 28px;
+}
+
+.accordion__desc {
+  max-width: 62ch;
+  font-size: 17px;
+  color: var(--color-text-muted);
+}
+
+.accordion__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.accordion__tags span {
+  padding: 8px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  background: rgba(255, 255, 255, 0.74);
+}
+
+.filter-btn {
+  padding: 11px 18px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.72);
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.filter-btn:hover,
+.filter-btn--active {
+  color: var(--color-black);
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.filter-btn:hover {
+  transform: translateY(-1px);
+}
+
+.contact__form,
+.careers__form {
+  display: grid;
+  gap: 14px;
+}
+
+.careers__form {
+  grid-template-columns: 1fr 1fr;
+}
+
+.careers__form textarea,
+.careers__form button,
+.careers__form .form-feedback {
+  grid-column: 1 / -1;
+}
+
+.contact__form input,
+.contact__form select,
+.contact__form textarea,
+.careers__form input,
+.careers__form select,
+.careers__form textarea {
+  width: 100%;
+  min-height: 54px;
+  padding: 16px 18px;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.84);
+  color: var(--color-text);
+  outline: none;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.hero .btn--ghost,
+.contact__panel .contact__form input,
+.contact__panel .contact__form select,
+.contact__panel .contact__form textarea,
+.careers__open-box .careers__form input,
+.careers__open-box .careers__form select,
+.careers__open-box .careers__form textarea {
+  color: var(--color-dark-text);
+  border-color: rgba(201, 154, 0, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.hero .btn--ghost {
+  color: var(--color-dark-text);
+  border-color: rgba(201, 154, 0, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.hero .btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.contact__panel .contact__form input::placeholder,
+.contact__panel .contact__form textarea::placeholder,
+.careers__open-box .careers__form input::placeholder,
+.careers__open-box .careers__form textarea::placeholder {
+  color: rgba(246, 242, 235, 0.52);
+}
+
+.contact__panel .contact__form select,
+.careers__open-box .careers__form select {
+  color: rgba(246, 242, 235, 0.58);
+}
+
+.contact__form textarea,
+.careers__form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.contact__form input::placeholder,
+.contact__form textarea::placeholder,
+.careers__form input::placeholder,
+.careers__form textarea::placeholder {
+  color: var(--color-text-dim);
+}
+
+.contact__form select,
+.careers__form select {
+  color: var(--color-text-dim);
+  appearance: none;
+}
+
+.contact__form input:focus,
+.contact__form select:focus,
+.contact__form textarea:focus,
+.careers__form input:focus,
+.careers__form select:focus,
+.careers__form textarea:focus {
+  border-color: var(--color-border-strong);
+}
+
+.form-feedback {
+  min-height: 22px;
+  color: var(--color-accent);
+  font-size: 14px;
+}
+
+@media (max-width: 720px) {
+  .accordion__header {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .accordion__meta {
+    display: none;
+  }
+
+  .careers__form {
+    grid-template-columns: 1fr;
+  }
+}
