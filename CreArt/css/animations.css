@@ -1,0 +1,103 @@
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero__eyebrow {
+  opacity: 0;
+  animation: fadeUp 0.7s 0.08s forwards;
+}
+
+.hero__line {
+  opacity: 0;
+  transform: translateY(42px);
+  animation: heroReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero__line:nth-child(1) { animation-delay: 0.16s; }
+.hero__line:nth-child(2) { animation-delay: 0.3s; }
+.hero__line:nth-child(3) { animation-delay: 0.44s; }
+
+.hero__sub,
+.hero__actions {
+  opacity: 0;
+  animation: fadeUp 0.75s 0.7s forwards;
+}
+
+.hero__actions {
+  animation-delay: 0.84s;
+}
+
+.hero-card {
+  opacity: 0;
+  animation: fadeUp 0.85s 0.95s forwards;
+}
+
+.hero-card--metrics {
+  animation-delay: 1.08s;
+}
+
+@keyframes heroReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.work__item:nth-child(1).reveal,
+.strategy-card:nth-child(1).reveal,
+.proof-card:nth-child(1).reveal { transition-delay: 0s; }
+
+.work__item:nth-child(2).reveal,
+.strategy-card:nth-child(2).reveal,
+.proof-card:nth-child(2).reveal { transition-delay: 0.08s; }
+
+.work__item:nth-child(3).reveal,
+.strategy-card:nth-child(3).reveal,
+.proof-card:nth-child(3).reveal { transition-delay: 0.16s; }
+
+.strategy-card:nth-child(4).reveal { transition-delay: 0.24s; }
+
+.accordion:nth-child(1).reveal { transition-delay: 0s; }
+.accordion:nth-child(2).reveal { transition-delay: 0.08s; }
+.accordion:nth-child(3).reveal { transition-delay: 0.16s; }
+.accordion:nth-child(4).reveal { transition-delay: 0.24s; }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
