@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Únete — CreArt</title>
+  <meta name="description" content="Trabaja con CreArt. Buscamos personas con criterio, curiosidad y capacidad de ejecución.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=3">
+  <link rel="stylesheet" href="css/components.css?v=3">
+  <link rel="stylesheet" href="css/animations.css?v=3">
+</head>
+<body class="theme-light">
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Ir al inicio de CreArt"><img src="assets/img/logo-creart-dark.svg" alt="CreArt" class="logo-img"></a>
+      <nav class="nav__menu" aria-label="Principal">
+        <a href="trabajo.html" class="nav__link">Casos</a>
+        <a href="servicios.html" class="nav__link">Servicios</a>
+        <a href="nosotros.html" class="nav__link">Agencia</a>
+        <a href="unete.html" class="nav__link">Únete</a>
+        <a href="contacto.html" class="nav__link">Contacto</a>
+      </nav>
+      <a href="contacto.html" class="nav__cta">Hablemos</a>
+      <button class="nav__hamburger" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-menu__nav" aria-label="Menú móvil">
+      <a href="trabajo.html" class="mobile-menu__link">Casos</a>
+      <a href="servicios.html" class="mobile-menu__link">Servicios</a>
+      <a href="nosotros.html" class="mobile-menu__link">Agencia</a>
+      <a href="unete.html" class="mobile-menu__link">Únete</a>
+      <a href="contacto.html" class="mobile-menu__link">Contacto</a>
+    </nav>
+  </div>
+  <main>
+    <section class="page-hero page-hero--light">
+      <div class="container page-hero__layout">
+        <div>
+          <p class="hero__eyebrow">Carrera</p>
+          <h1 class="hero__title">
+            <span class="hero__line">Buscamos personas</span>
+            <span class="hero__line">que combinen criterio,</span>
+            <span class="hero__line"><em>detalle y ambición.</em></span>
+          </h1>
+        </div>
+        <p class="page-hero__summary">Nos interesa trabajar con gente que quiera construir marcas con más nivel y no solo producir entregables. Si valoras la claridad, el diseño y la ejecución sólida, conversemos.</p>
+      </div>
+    </section>
+    <section class="careers">
+      <div class="container">
+        <div class="careers__intro reveal">
+          <p>Somos un equipo que mezcla experiencia, sensibilidad creativa y foco comercial. Nos importa el detalle, el pensamiento estratégico y la capacidad de sacar buen trabajo adelante sin dramatizar el proceso.</p>
+        </div>
+        <div class="careers__positions">
+          <h2 class="careers__heading reveal">Posiciones abiertas</h2>
+          <div class="accordion reveal" data-accordion>
+            <button class="accordion__header" aria-expanded="false">
+              <span class="accordion__title">Diseñador/a Gráfico</span>
+              <span class="accordion__meta">Full-time · Santiago</span>
+              <span class="accordion__icon"></span>
+            </button>
+            <div class="accordion__body"><div class="accordion__content"><p class="accordion__desc">Buscamos una mirada visual sólida para branding, piezas digitales y presentaciones comerciales. Valoramos criterio tipográfico, composición y capacidad de transformar estrategia en sistema visual.</p></div></div>
+          </div>
+          <div class="accordion reveal" data-accordion>
+            <button class="accordion__header" aria-expanded="false">
+              <span class="accordion__title">Ejecutivo/a de Cuentas</span>
+              <span class="accordion__meta">Full-time · Santiago</span>
+              <span class="accordion__icon"></span>
+            </button>
+            <div class="accordion__body"><div class="accordion__content"><p class="accordion__desc">Buscamos a alguien capaz de ordenar conversaciones, alinear expectativas y mover proyectos con claridad, criterio y buen trato. La experiencia en agencias suma mucho.</p></div></div>
+          </div>
+          <div class="accordion reveal" data-accordion>
+            <button class="accordion__header" aria-expanded="false">
+              <span class="accordion__title">Community Manager</span>
+              <span class="accordion__meta">Full-time · Remoto</span>
+              <span class="accordion__icon"></span>
+            </button>
+            <div class="accordion__body"><div class="accordion__content"><p class="accordion__desc">Necesitamos una persona con sensibilidad editorial y orden operativo para gestionar contenido, calendarios, publicaciones y lectura de desempeño para distintas marcas.</p></div></div>
+          </div>
+        </div>
+        <div class="careers__open reveal">
+          <div class="careers__open-box">
+            <h3>¿No ves tu rol aquí?</h3>
+            <p>Si crees que puedes aportar criterio, energía y un estándar alto de ejecución, envíanos tu perfil.</p>
+            <form class="careers__form" id="careersForm" data-success-message="Gracias por tu interés. Revisaremos tu perfil y te escribiremos si hay match.">
+              <input type="text" name="nombre" placeholder="Nombre" required>
+              <input type="email" name="email" placeholder="Email" required>
+              <select name="area">
+                <option value="" disabled selected>Área de interés</option>
+                <option value="diseno">Diseño</option>
+                <option value="marketing">Marketing Digital</option>
+                <option value="desarrollo">Desarrollo Web</option>
+                <option value="cuentas">Cuentas / Atención al Cliente</option>
+                <option value="otro">Otro</option>
+              </select>
+              <input type="url" name="portfolio" placeholder="Link a portfolio o LinkedIn">
+              <textarea name="mensaje" placeholder="¿Qué aportarías a CreArt?" rows="3"></textarea>
+              <button type="submit" class="btn btn--primary">Enviar postulación</button>
+              <p class="form-feedback" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand"><img src="assets/img/logo-creart.svg" alt="CreArt" class="logo-img"></div>
+        <div class="footer__copy"><p>Nos interesa construir un equipo con buen criterio, buenas preguntas y ganas reales de hacer trabajo de nivel.</p></div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__links"><a href="trabajo.html">Casos</a><a href="servicios.html">Servicios</a><a href="nosotros.html">Agencia</a><a href="unete.html">Únete</a><a href="contacto.html">Contacto</a></div>
+        <div class="footer__social"><a href="#">Instagram</a><a href="#">LinkedIn</a><a href="#">Facebook</a></div>
+        <p class="footer__legal">&copy; 2026 CreArt. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  <a href="https://wa.me/56993459482" class="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="whatsapp__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+  <script src="js/main.js"></script>
+</body>
+</html>
